@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ssuarezExamen.Resumen">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="TextColor" Value="BLUE"></Setter>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="TextColor" Value="Green"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblUserConnect" HorizontalTextAlignment="End" TextColor="Red"/>
+
+            <Label Text="RESUMEN" FontSize="24" HorizontalTextAlignment="Center"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" FontSize="20" Grid.Row="0" Grid.Column="0"></Label>
+                <Entry x:Name="txtName" IsReadOnly="True" Grid.Row="0" Grid.Column="1"></Entry>
+
+                <Label Text="Apellido" FontSize="20" Grid.Row="1" Grid.Column="0"></Label>
+                <Entry x:Name="txtLastName" IsReadOnly="True" Grid.Row="1" Grid.Column="1"></Entry>
+
+                <Label Text="Edad" FontSize="20" Grid.Row="2" Grid.Column="0"></Label>
+                <Entry x:Name="txtYearOld" IsReadOnly="True" Grid.Row="2" Grid.Column="1"></Entry>
+
+                <Label Text="Fecha" FontSize="20" Grid.Row="3" Grid.Column="0"></Label>
+                <Entry x:Name="txtDateNow" IsReadOnly="True" Grid.Row="3" Grid.Column="1"></Entry>
+
+                <Label Text="Pais" FontSize="20" Grid.Row="4" Grid.Column="0"></Label>
+                <Entry x:Name="txtCountry" IsReadOnly="True" Grid.Row="4" Grid.Column="1"></Entry>
+
+                <Label Text="Ciudad" FontSize="20" Grid.Row="5" Grid.Column="0"></Label>
+                <Entry x:Name="txtCity" IsReadOnly="True" Grid.Row="5" Grid.Column="1"></Entry>
+
+                <Label Text="Monto Inicial" FontSize="20" Grid.Row="6" Grid.Column="0"></Label>
+                <Entry x:Name="txtAmmountInitial" IsReadOnly="True" Grid.Row="6" Grid.Column="1"></Entry>
+
+                <Label Text="Monto Mensual" FontSize="20" Grid.Row="7" Grid.Column="0"></Label>
+                <Entry x:Name="txtAmmountMonth" IsReadOnly="True" Grid.Row="7" Grid.Column="1"></Entry>
+
+                <Label Text="Pago Total" FontSize="20" Grid.Row="8" Grid.Column="0"></Label>
+                <Entry x:Name="txtTotal" IsReadOnly="True" Grid.Row="8" Grid.Column="1"></Entry>
+
+                <Button Text="Salir" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Button_Clicked"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
